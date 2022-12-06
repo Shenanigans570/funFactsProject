@@ -2,10 +2,13 @@
 const renderFish = (fishObj) => {
     // console.log(fishObj['Taste'])
     const grabLiveWell = document.getElementById('liveWell')
-    const createPTag = document.createElement('p')
+    const namePTag = document.createElement('p')
     const createImgTag = document.createElement('img')
-    grabLiveWell.append(createPTag, createImgTag)
+    grabLiveWell.append(namePTag, createImgTag)
 
+
+    //setting attributes to show the individual fish
+    fishObj.src = ''
 
 }
 
