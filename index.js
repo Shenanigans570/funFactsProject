@@ -9,24 +9,29 @@ const renderFish = (fishObj) => {
     const healthBenefitsPTag = document.createElement('p')
     const proteinPTag = document.createElement('p')
     const tastePTag = document.createElement('p')
+    const fishCard = document.createElement('div')
+
 
     const createImgTag = document.createElement('img')
 //add classes to name, protein, taste, health benefits
     nameH1Tag.classList.add('fishName')
     healthBenefitsPTag.classList.add('healthBenefits')
-    proteinPTag.classList.add('Protein')
-    tastePTag.classList.add('Taste')
+    proteinPTag.classList.add('protein')
+    tastePTag.classList.add('taste')
     //appending new elements
-    grabLiveWell.append(nameH1Tag, createImgTag, healthBenefitsPTag, proteinPTag, tastePTag)
+    fishCard.append(nameH1Tag, createImgTag, healthBenefitsPTag, proteinPTag, tastePTag)
 
 
     //setting attributes to show the individual fish
     createImgTag.src = fishObj["Species Illustration Photo"].src
     nameH1Tag.innerText = fishObj['Species Name']
-    healthBenefitsPTag.textContent = fishObj['Health Benefits']
-    proteinPTag.textContent = fishObj['protein']
-    tastePTag.textContent = fishObj['Taste']
-
+    healthBenefitsPTag.innerHTML = fishObj['Health Benefits']
+    proteinPTag.innerText = `Protein content: ${fishObj['Protein']} g`
+    tastePTag.innerHTML = fishObj['Taste']
+    
+    //create containers
+    fishCard.classList.add('fishCardDiv')
+    grabLiveWell.appendChild(fishCard)
 }
 
 
