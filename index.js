@@ -1,12 +1,11 @@
 const darkModeBtn = document.createElement('button')
-
 darkModeBtn.innerText = 'Toggle Dark Mode'
 document.body.prepend(darkModeBtn)
 
 
 
 const handleClick = (event) => {
-    console.log('works')
+    document.body.classList.toggle("dark-mode")
 }
 
 darkModeBtn.addEventListener('click', handleClick)
@@ -21,15 +20,26 @@ const renderFish = (fishObj) => {
     const proteinPTag = document.createElement('p')
     const tastePTag = document.createElement('p')
     const fishCard = document.createElement('div')
+    fishCard.addEventListener('mouseenter', () => {
+        fishDetailsContainer.classList.remove('hidden')
+    })
+    fishCard.addEventListener('mouseleave', () => {
+        fishDetailsContainer.classList.add('hidden')
+    })
+
+
 
     const createImgTag = document.createElement('img')
+    const fishDetailsContainer = document.createElement('div')
+    fishDetailsContainer.classList.add('hidden')
     //add classes to name, protein, taste, health benefits
     nameH1Tag.classList.add('fishName')
     healthBenefitsPTag.classList.add('healthBenefits')
     proteinPTag.classList.add('protein')
     tastePTag.classList.add('taste')
+    fishDetailsContainer.append(healthBenefitsPTag, proteinPTag, tastePTag)
     //appending new elements
-    fishCard.append(nameH1Tag, createImgTag, healthBenefitsPTag, proteinPTag, tastePTag)
+    fishCard.append(nameH1Tag, createImgTag, fishDetailsContainer)
 
 
     //setting attributes to show the individual fish

@@ -10,6 +10,11 @@ body {
     color: white;
   }
 
+  .hidden {
+    display: none;
+    
+  }
+
 #liveWell {
     display:inline-grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
