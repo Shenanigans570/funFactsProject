@@ -1,3 +1,14 @@
+body {
+    padding: 15px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
 
 #liveWell {
     display:inline-grid;
