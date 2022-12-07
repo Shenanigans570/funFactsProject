@@ -1,14 +1,13 @@
-const grabDarkModeButton = document.getElementsByClassName('dark-mode')
+const darkModeBtn = document.createElement('button')
+darkModeBtn.innerHTML = 'Toggle Dark Mode'
+document.body.appendChild(darkModeBtn)
 
-grabDarkModeButton.
 
 const handleClick = (event) => {
-    debugger
-    if(event) {
-        document.style.backgroundColor = 'black'
-        document.style.color = 'white'
-    }
+    console.log('works')
 }
+
+darkModeBtn.addEventListener('click', handleClick)
 
 const renderFish = (fishObj) => {
     console.log(fishObj)
