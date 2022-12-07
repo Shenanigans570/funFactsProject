@@ -4,9 +4,19 @@
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-template: 25em/ auto auto auto;
     column-gap: 5em;
-   
+   row-gap: 3em;
 }
 
+#fishHeader {
+    text-align: center;
+}
+
+#fish-headline {
+    text-align: center;
+}
+#fish-subheading {
+    text-align:center
+}
 
 img {
     height: 9em;

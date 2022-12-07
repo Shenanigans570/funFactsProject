@@ -25,9 +25,10 @@ const renderFish = (fishObj) => {
     //setting attributes to show the individual fish
     createImgTag.src = fishObj["Species Illustration Photo"].src
     nameH1Tag.innerText = fishObj['Species Name']
-    healthBenefitsPTag.innerHTML = fishObj['Health Benefits']
-    proteinPTag.innerText = `Protein content: ${fishObj['Protein']} g`
-    tastePTag.innerHTML = fishObj['Taste']
+    healthBenefitsPTag.innerHTML = `Health Benefits:${fishObj['Health Benefits']}`
+    proteinPTag.innerHTML = `Protein content: ${fishObj['Protein']}`
+    
+    tastePTag.innerHTML = `Taste: ${fishObj['Taste']}`
     
     //create containers
     fishCard.classList.add('fishCardDiv')
