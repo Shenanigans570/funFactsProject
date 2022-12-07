@@ -1,8 +1,32 @@
 const darkModeBtn = document.createElement('button')
-darkModeBtn.innerText = 'Toggle Dark Mode'
+
+darkModeBtn.innerText = 'Toggle Deep Sea Mode'
+
 document.body.prepend(darkModeBtn)
+const grabFishForm = document.querySelector('#fishForm')
+const grabSubmitButton = document.querySelector('#button')
+const commentUl = document.querySelector('comment-list')
 
 
+
+const handleSubmit = (event) => {
+    event.preventDefault()
+    const commentLi = document.createElement('li')
+
+
+    commentUl.appendChild(commentLi)
+    // console.log('FUCK YEAH')
+//     const newComment = {content: e.target.comment.value}
+//     // less D.R.Y and less code reuse
+
+//     // const li = document.createElement("li")
+//     // li.innerText = newComment
+//     // cardCommentsList.appendChild(li)
+
+//     // Better version, watch out cause we need to pass an object not a simple string
+//     displayComment(newComment)
+    event.target.reset()
+}
 
 const handleClick = (event) => {
     document.body.classList.toggle("dark-mode")
@@ -63,4 +87,12 @@ fetch('https://www.fishwatch.gov/api/species')
 
 fishFetch()
 
+const displayComment = (comment) => {
+    const li = document.createElement("li")
+    li.innerText = comment.content
+    cardCommentsList.appendChild(li)
+}
+
+
+grabFishForm.addEventListener('submit', handleSubmit)
 
