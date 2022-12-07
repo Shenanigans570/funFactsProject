@@ -2,50 +2,72 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Toy Tale</title>
+    <title>Fish Facts!</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="toy-header">
+    <h1 id = 'fish-headline'>Fish Facts!</h1>
+    <h3 id = 'fish-subheading'>Straight out of NOAA!</h3>
+    <div id="fishHeader">
       <img
-        src="https://fontmeme.com/permalink/180719/67429e6afec53d21d64643101c43f029.png"
-        alt="toy-header"
-      />
+        src="./assets/fishPic.jpeg" 
+        alt="fishHeader"
+        />
     </div>
 
-    <div class="container">
-      <form class="add-toy-form">
-        <h3>Create a toy!</h3>
+ 
+  
+    <div id="liveWell">
+      <!-- <img id="fishPic">
+      <p id = 'fishFact'> -->
+<!--    Species Name
+        Taste
+        Protein
+        Health benefits
+         -->
+        <!-- </p>
+       -->
 
-        <input
-          type="text"
-          name="name"
-          value=""
-          placeholder="Enter a toy's name..."
-          class="input-text"
-        />
-        <br />
-        <input
-          type="text"
-          name="image"
-          value=""
-          placeholder="Enter a toy's image URL..."
-          class="input-text"
-        />
-        <br />
-        <input
-          type="submit"
-          name="submit"
-          value="Create Toy"
-          class="submit"
-        />
-      </form>
     </div>
-    <p style="text-align:center">
-      Andy needs your help! <button id="new-toy-btn">Add a new toy!</button>
-    </p>
-
-    <div id="toy-collection"></div>
-    <script type="text/javascript" src="src/index.js"></script>
+  
+    <!-- <p style="text-align:center">
+      Learn about fish! <button id="newCommentButton">Add new comment</button>
+    </p> -->
+    
+    <div id="fishCollection"></div>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
+
+
+
+<!-- 
+
+<div class="container">
+  <form class="addFishFact">
+    <h3>Add your own fish fact!</h3>
+
+    <input
+      type="text"
+      name="name"
+      value=""
+      placeholder="Enter an fish name..."
+      class="input-text"
+    />
+    <br />
+    <input
+      type="text"
+      name="image"
+      value=""
+      placeholder="Enter an fish image URL..."
+      class="input-text"
+    />
+    <br />
+    <input
+      type="submit"
+      name="submit"
+      value="Create fish card"
+      class="submit"
+    />
+  </form>
+</div> -->
