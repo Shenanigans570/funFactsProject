@@ -1,6 +1,8 @@
 const darkModeBtn = document.createElement('button')
-darkModeBtn.innerHTML = 'Toggle Dark Mode'
-document.body.appendChild(darkModeBtn)
+
+darkModeBtn.innerText = 'Toggle Dark Mode'
+document.body.prepend(darkModeBtn)
+
 
 
 const handleClick = (event) => {
@@ -8,6 +10,7 @@ const handleClick = (event) => {
 }
 
 darkModeBtn.addEventListener('click', handleClick)
+
 
 const renderFish = (fishObj) => {
     console.log(fishObj)
@@ -20,7 +23,7 @@ const renderFish = (fishObj) => {
     const fishCard = document.createElement('div')
 
     const createImgTag = document.createElement('img')
-//add classes to name, protein, taste, health benefits
+    //add classes to name, protein, taste, health benefits
     nameH1Tag.classList.add('fishName')
     healthBenefitsPTag.classList.add('healthBenefits')
     proteinPTag.classList.add('protein')
@@ -34,7 +37,6 @@ const renderFish = (fishObj) => {
     nameH1Tag.innerText = fishObj['Species Name']
     healthBenefitsPTag.innerHTML = `Health Benefits:${fishObj['Health Benefits']}`
     proteinPTag.innerHTML = `Protein content: ${fishObj['Protein']}`
-    
     tastePTag.innerHTML = `Taste: ${fishObj['Taste']}`
     
     //create containers
@@ -47,4 +49,8 @@ fetch('https://www.fishwatch.gov/api/species')
 .then(resp => resp.json())
 .then(fishData => fishData.forEach(renderFish))
 }
+
+
 fishFetch()
+
+
