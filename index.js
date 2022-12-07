@@ -1,16 +1,16 @@
 const darkModeBtn = document.createElement('button')
-darkModeBtn.innerHTML = "Toggle Dark Mode";
-document.body.appendChild(darkModeBtn)
-const grabImageInfo = document.querySelector('#fishCardDiv > .img')
+
+darkModeBtn.innerText = 'Toggle Dark Mode'
+document.body.prepend(darkModeBtn)
 
 
 
 const handleClick = (event) => {
-    
+    console.log('works')
 }
 
+darkModeBtn.addEventListener('click', handleClick)
 
-darkModeBtn.addEventListener("click", handleClick)
 
 const renderFish = (fishObj) => {
     console.log(fishObj)
@@ -21,7 +21,6 @@ const renderFish = (fishObj) => {
     const proteinPTag = document.createElement('p')
     const tastePTag = document.createElement('p')
     const fishCard = document.createElement('div')
-
 
     const createImgTag = document.createElement('img')
     //add classes to name, protein, taste, health benefits
@@ -45,12 +44,13 @@ const renderFish = (fishObj) => {
     grabLiveWell.appendChild(fishCard)
 }
 
-
-
 const fishFetch = () => { 
 fetch('https://www.fishwatch.gov/api/species')
 .then(resp => resp.json())
 .then(fishData => fishData.forEach(renderFish))
 }
 
+
 fishFetch()
+
+
