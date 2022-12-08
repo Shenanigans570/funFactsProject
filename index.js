@@ -1,24 +1,27 @@
 const darkModeBtn = document.createElement('button')
 
+
+
 darkModeBtn.innerText = 'Toggle Deep Sea Mode'
 
 document.body.prepend(darkModeBtn)
 const grabFishForm = document.querySelector('#fishForm')
 const grabSubmitButton = document.querySelector('#button')
-const commentUl = document.querySelector('comment-list')
+const commentUl = document.querySelector('#comment-list')
+const commentInput = document.querySelector('.comment-input')
+const createPTag = document.createElement('p')
 
 const displayComment = (comment) => {
-    const li = document.createElement("li")
-    li.innerText = comment.content
-    commentUl.appendChild(li)
+   
+    createPTag.innerText = comment
+    commentUl.appendChild(createPTag)
 }
 
 const handleSubmit = (event) => {
     event.preventDefault()
-    const newComment = {content: event.target.comment.value}
+    const newComment = event.target.comment.value
     displayComment(newComment)
-    event.target.comment.value
-    commentUl.append(commentLi)
+    // commentUl.append(createPTag)
     event.target.reset()
 }
 

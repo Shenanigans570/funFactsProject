@@ -6,7 +6,8 @@ body {
   }
 
   .dark-mode {
-    background-color: black;
+    background-color: rgb(2,2,60
+    );
     color: white;
   }
 
@@ -16,11 +17,10 @@ body {
   }
 
 #liveWell {
-    display:inline-grid;
+    display:grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-template: 25em/ auto auto auto;
-    column-gap: 5em;
-   row-gap: 3em;
+ 
 }
 
 #fishHeader {
@@ -38,6 +38,13 @@ img {
     height: 9em;
     width:14em;
 
+}
+
+.fishCardDiv {
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
 }
 
 /* .dark-mode {
