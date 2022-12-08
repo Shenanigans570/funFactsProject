@@ -9,10 +9,9 @@ const grabFishForm = document.querySelector('#fishForm')
 const grabSubmitButton = document.querySelector('#button')
 const commentUl = document.querySelector('#comment-list')
 const commentInput = document.querySelector('.comment-input')
-const createPTag = document.createElement('p')
 
 const displayComment = (comment) => {
-   
+    const createPTag = document.createElement('p')
     createPTag.innerText = comment
     commentUl.appendChild(createPTag)
 }
