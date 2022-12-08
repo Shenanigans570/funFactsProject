@@ -7,24 +7,18 @@ const grabFishForm = document.querySelector('#fishForm')
 const grabSubmitButton = document.querySelector('#button')
 const commentUl = document.querySelector('comment-list')
 
-
+const displayComment = (comment) => {
+    const li = document.createElement("li")
+    li.innerText = comment.content
+    commentUl.appendChild(li)
+}
 
 const handleSubmit = (event) => {
     event.preventDefault()
-    const commentLi = document.createElement('li')
-
-
-    commentUl.appendChild(commentLi)
-    // console.log('FUCK YEAH')
-//     const newComment = {content: e.target.comment.value}
-//     // less D.R.Y and less code reuse
-
-//     // const li = document.createElement("li")
-//     // li.innerText = newComment
-//     // cardCommentsList.appendChild(li)
-
-//     // Better version, watch out cause we need to pass an object not a simple string
-//     displayComment(newComment)
+    const newComment = {content: event.target.comment.value}
+    displayComment(newComment)
+    event.target.comment.value
+    commentUl.append(commentLi)
     event.target.reset()
 }
 
@@ -36,7 +30,7 @@ darkModeBtn.addEventListener('click', handleClick)
 
 
 const renderFish = (fishObj) => {
-    console.log(fishObj)
+    // console.log(fishObj)
     //grabbing parent elements and creating new child elements
     const grabLiveWell = document.getElementById('liveWell')
     const nameH1Tag = document.createElement('h1')
@@ -44,6 +38,7 @@ const renderFish = (fishObj) => {
     const proteinPTag = document.createElement('p')
     const tastePTag = document.createElement('p')
     const fishCard = document.createElement('div')
+    const commentPTag = document.createElement('p')
     fishCard.addEventListener('mouseenter', () => {
         fishDetailsContainer.classList.remove('hidden')
     })
@@ -51,9 +46,8 @@ const renderFish = (fishObj) => {
         fishDetailsContainer.classList.add('hidden')
     })
 
-
-
     const createImgTag = document.createElement('img')
+    createImgTag.alt = fishObj['Species Name']
     const fishDetailsContainer = document.createElement('div')
     fishDetailsContainer.classList.add('hidden')
     //add classes to name, protein, taste, health benefits
@@ -62,8 +56,9 @@ const renderFish = (fishObj) => {
     proteinPTag.classList.add('protein')
     tastePTag.classList.add('taste')
     fishDetailsContainer.append(healthBenefitsPTag, proteinPTag, tastePTag)
+    commentPTag.classList.add('fishComment')
     //appending new elements
-    fishCard.append(nameH1Tag, createImgTag, fishDetailsContainer)
+    fishCard.append(nameH1Tag, createImgTag, fishDetailsContainer, commentPTag)
 
 
     //setting attributes to show the individual fish
@@ -87,11 +82,7 @@ fetch('https://www.fishwatch.gov/api/species')
 
 fishFetch()
 
-const displayComment = (comment) => {
-    const li = document.createElement("li")
-    li.innerText = comment.content
-    cardCommentsList.appendChild(li)
-}
+
 
 
 grabFishForm.addEventListener('submit', handleSubmit)
