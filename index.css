@@ -22,6 +22,11 @@ body {
  
 }
 
+#fishComments {
+  display: grid;
+  justify-content: right;
+}
+
 #fishHeader {
     text-align: center;
 }
