@@ -32,4 +32,4 @@ Pull Requests are welcome on [GitHub](https://github.com/Shenanigans570/funFacts
 
 ## Video Walkthrough
 
-<a href="https://youtu.be/0VrF3qtZHVg"></a>
+<a href="https://youtu.be/0VrF3qtZHVg"><img id="img-with-fallback" class="style-scope ytcp-img-with-fallback" src="https://i9.ytimg.com/vi/0VrF3qtZHVg/mq1.jpg?sqp=COiMzZwG-oaymwEmCMACELQB8quKqQMa8AEB-AH-BYAC4AOKAgwIABABGFUgVChlMA8=&amp;rs=AOn4CLDxQPcgFWPwNtsQIJjLI016t01Lbw"/></a>
