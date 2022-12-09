@@ -1,7 +1,4 @@
 const darkModeBtn = document.createElement('button')
-
-
-
 darkModeBtn.innerText = 'Toggle Deep Sea Mode'
 
 document.body.prepend(darkModeBtn)
