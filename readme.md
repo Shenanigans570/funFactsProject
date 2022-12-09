@@ -14,12 +14,16 @@ for PC users run:
 explorer.exe open index.html
 ```
 
-### Usage 
+## Usage 
 
 - Once opened, the page will automatically load individual fish cards.
 - You can run your mouse over any fish you like or are interested in learning about and have its information display.
 - you can also make use of the "Deep Sea Mode" button at the top left of the page to toggle to dark mode.
 - At the bottom of the page you will find a small comment section that when you find some information you enjoyed, you can leave a note.
+
+## License
+
+The program is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT)
 
 
 ## Source
